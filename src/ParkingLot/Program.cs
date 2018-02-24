@@ -10,6 +10,18 @@ namespace ParkingLot
     {
         static void Main(string[] args)
         {
+            if (args.Length > 0)
+            {
+                //read file
+            }
+            else
+            {
+                for (int i = 0; ; i++)
+                {
+                    Console.ReadLine();
+                    Console.WriteLine("Read");
+                }
+            }
         }
     }
 }
