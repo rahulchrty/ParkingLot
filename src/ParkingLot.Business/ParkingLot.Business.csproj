@@ -40,13 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandExecutor\CommandExecutorProvier.cs" />
+    <Compile Include="CommandExecutor\CommandExecutorProvider.cs" />
+    <Compile Include="Commands\CreateParkingLot.cs" />
+    <Compile Include="Utils\Command.cs" />
+    <Compile Include="Utils\Slot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParkingLot.BusinessInterfaces\ParkingLot.BusinessInterfaces.csproj">
       <Project>{4068a502-ab5e-49fb-ac54-f0239c8a6106}</Project>
       <Name>ParkingLot.BusinessInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLot.Model\ParkingLot.Model.csproj">
+      <Project>{680028c3-25d2-41ba-ae62-ae2926e0f025}</Project>
+      <Name>ParkingLot.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLot.RepositoryInterfaces\ParkingLot.RepositoryInterfaces.csproj">
+      <Project>{c871c2ad-d390-4bdb-88fb-ed24ca9d1639}</Project>
+      <Name>ParkingLot.RepositoryInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

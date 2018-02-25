@@ -1,12 +1,12 @@
 ﻿using ParkingLot.BusinessInterfaces;
 using System.Linq;
 
-namespace ParkingLot.Business.CommandExecutor
+namespace ParkingLot.Business
 {
-    public class CommandExecutorProvier : ICommandExecutorProvier
+    public class CommandExecutorProvider : ICommandExecutorProvier
     {
         private ICommandExecutorSelector[] _selectors;
-        public CommandExecutorProvier(ICommandExecutorSelector[] selectors)
+        public CommandExecutorProvider(ICommandExecutorSelector[] selectors)
         {
             _selectors = selectors;
         }

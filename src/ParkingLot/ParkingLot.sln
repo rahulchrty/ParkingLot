@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLot.Business", "..\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLot.BusinessInterfaces", "..\ParkingLot.BusinessInterfaces\ParkingLot.BusinessInterfaces.csproj", "{4068A502-AB5E-49FB-AC54-F0239C8A6106}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLot.Model", "..\ParkingLot.Model\ParkingLot.Model.csproj", "{680028C3-25D2-41BA-AE62-AE2926E0F025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLot.RepositoryInterfaces", "..\ParkingLot.RepositoryInterfaces\ParkingLot.RepositoryInterfaces.csproj", "{C871C2AD-D390-4BDB-88FB-ED24CA9D1639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLot.Repository", "..\ParkingLot.Repository\ParkingLot.Repository.csproj", "{254EC813-7B86-48EE-B3AE-38E922956BD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{4068A502-AB5E-49FB-AC54-F0239C8A6106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4068A502-AB5E-49FB-AC54-F0239C8A6106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4068A502-AB5E-49FB-AC54-F0239C8A6106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680028C3-25D2-41BA-AE62-AE2926E0F025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680028C3-25D2-41BA-AE62-AE2926E0F025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680028C3-25D2-41BA-AE62-AE2926E0F025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680028C3-25D2-41BA-AE62-AE2926E0F025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C871C2AD-D390-4BDB-88FB-ED24CA9D1639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C871C2AD-D390-4BDB-88FB-ED24CA9D1639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C871C2AD-D390-4BDB-88FB-ED24CA9D1639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C871C2AD-D390-4BDB-88FB-ED24CA9D1639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254EC813-7B86-48EE-B3AE-38E922956BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254EC813-7B86-48EE-B3AE-38E922956BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254EC813-7B86-48EE-B3AE-38E922956BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254EC813-7B86-48EE-B3AE-38E922956BD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

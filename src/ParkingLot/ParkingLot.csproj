@@ -48,6 +48,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingLot.BusinessInterfaces\ParkingLot.BusinessInterfaces.csproj">
+      <Project>{4068a502-ab5e-49fb-ac54-f0239c8a6106}</Project>
+      <Name>ParkingLot.BusinessInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLot.Business\ParkingLot.Business.csproj">
+      <Project>{8dd66186-fde9-4373-8679-e55eea00106d}</Project>
+      <Name>ParkingLot.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLot.RepositoryInterfaces\ParkingLot.RepositoryInterfaces.csproj">
+      <Project>{c871c2ad-d390-4bdb-88fb-ed24ca9d1639}</Project>
+      <Name>ParkingLot.RepositoryInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLot.Repository\ParkingLot.Repository.csproj">
+      <Project>{254ec813-7b86-48ee-b3ae-38e922956bd7}</Project>
+      <Name>ParkingLot.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

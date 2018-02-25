@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ParkingLot.BusinessInterfaces;
-using ParkingLot.Business.CommandExecutor;
+using ParkingLot.Business;
 
 namespace ParkingLotTest.CommandExecutor
 {
     [TestClass]
-    public class CommandExecutorProvierTest
+    public class CommandExecutorProviderTest
     {
         private ICommandExecutorSelector[] _selectors;
         private ICommandExecutorProvier _provider;
@@ -22,7 +22,7 @@ namespace ParkingLotTest.CommandExecutor
             //When: I call CommandExecutorProvier object
             _selectors = new ICommandExecutorSelector[1];
             _selectors[0] = new ExecuteSelectorHijack(true);
-            _provider = new CommandExecutorProvier(_selectors);
+            _provider = new CommandExecutorProvider(_selectors);
             var result = _provider.InitExecutor(command);
             //Then: I get a type of ICommandExecutor
             Assert.IsInstanceOfType(result, typeof(ICommandExecutor));
@@ -35,7 +35,7 @@ namespace ParkingLotTest.CommandExecutor
             //When: I call CommandExecutorProvier object
             _selectors = new ICommandExecutorSelector[1];
             _selectors[0] = new ExecuteSelectorHijack(false);
-            _provider = new CommandExecutorProvier(_selectors);
+            _provider = new CommandExecutorProvider(_selectors);
             var result = _provider.InitExecutor(command);
             //Then: I get a type of ICommandExecutor
             Assert.IsNull(result);
