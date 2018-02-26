@@ -103,7 +103,7 @@ namespace ParkingLotTest.CommandExecutor
             _mockParkingRepository.Setup(x => x.GetEmptySlotIndex()).Returns(-1);
             string result = _commandExecutorSelector.ExecuteCommand(command);
             //Then: I get 'All slots are full'
-            string expected = "All slots are full";
+            string expected = "Sorry, parking lot is full";
             Assert.AreEqual(expected, result);
         }
     }

@@ -7,5 +7,7 @@ namespace ParkingLot.RepositoryInterfaces
         void CreateParkingSlots(int numberOfSlots);
         int ParkVehicle(VehicleDetailsModel vehicleDetail, int index);
         int GetEmptySlotIndex();
+        void EmptyASlot(int index);
+        int TotalSlotAllocated();
     }
 }

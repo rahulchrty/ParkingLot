@@ -45,10 +45,14 @@
     <Compile Include="CommandExecutor\ICommandExecutorProvier.cs" />
     <Compile Include="CommandExecutor\ICommandExecutorSelector.cs" />
     <Compile Include="Utils\ICommand.cs" />
+    <Compile Include="Utils\ILeaveSuccessMessage.cs" />
+    <Compile Include="Utils\IMaxSlotIndex.cs" />
     <Compile Include="Utils\IParkingVehicle.cs" />
     <Compile Include="Utils\IParkSuccessMessage.cs" />
     <Compile Include="Utils\ISlot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ISlotToEmpty.cs" />
+    <Compile Include="Validations\IValidateSlotNumberToEmpty.cs" />
     <Compile Include="Validations\IValidateVeicleDetails.cs" />
   </ItemGroup>
   <ItemGroup>

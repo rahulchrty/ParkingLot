@@ -48,7 +48,7 @@ namespace ParkingLot.Business
                     }
                     else
                     {
-                        message = "All slots are full";
+                        message = "Sorry, parking lot is full";
                     }
                 }
                 return message;

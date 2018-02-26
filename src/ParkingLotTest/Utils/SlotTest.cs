@@ -83,5 +83,15 @@ namespace ParkingLotTest.Utils
             //Then: get 0
             Assert.AreEqual(0, result);
         }
+        [TestMethod]
+        public void GivenCommandAs_create_parking_lot_Then_Get_0()
+        {
+            //Given: command as "create_parking_lot"
+            string command = "create_parking_lot";
+            //When: I call Slot object
+            int result = _slot.GetSlotSize(command);
+            //Then: get 0
+            Assert.AreEqual(0, result);
+        }
     }
 }

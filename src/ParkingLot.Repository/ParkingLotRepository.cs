@@ -43,5 +43,28 @@ namespace ParkingLot.Repository
             }
             return emptyIndex;
         }
+        public void EmptyASlot(int index)
+        {
+            try
+            {
+                _storage[index] = null;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        public int TotalSlotAllocated()
+        {
+            try
+            {
+                int slots = _storage.Length;
+                return slots;
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

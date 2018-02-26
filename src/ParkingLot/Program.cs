@@ -19,7 +19,12 @@ namespace ParkingLot
             IParkingVehicle _parkingVehicle = new ParkingVehicle();
             IParkSuccessMessage _parkSuccessMessage = new ParkSuccessMessage();
             ICommandExecutorSelector park = new Park(_checkCommand, _validateVeicleDetails, _parkingVehicle, _parkingRepository, _parkSuccessMessage);
-            ICommandExecutorSelector[] _selectors = { createParkingLot, park };
+            ISlotToEmpty _slotToEmpty = new SlotToEmpty();
+            IMaxSlotIndex _maxSlotIndex = new MaxSlotIndex();
+            IValidateSlotNumberToEmpty _validateSlotNumberToEmpty = new ValidateSlotNumberToEmpty(_parkingRepository, _maxSlotIndex);
+            ILeaveSuccessMessage _leaveSuccessMessage = new LeaveSuccessMessage();
+            ICommandExecutorSelector leave = new Leave(_checkCommand, _slotToEmpty, _validateSlotNumberToEmpty, _parkingRepository, _leaveSuccessMessage);
+            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave };
             ICommandExecutorProvier provider = new CommandExecutorProvider(_selectors);
             for (;;)
             {

@@ -9,8 +9,11 @@ namespace ParkingLot.Business
             int slotSize = 0;
             if (!string.IsNullOrEmpty(command))
             {
-                string slot = command.Split(' ')[1];
-                bool isValidSlot = int.TryParse(slot, out slotSize);
+                if (command.IndexOf(' ') > -1)
+                {
+                    string slot = command.Split(' ')[1];
+                    bool isValidSlot = int.TryParse(slot, out slotSize);
+                }
             }
             return slotSize;
         }
