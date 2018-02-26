@@ -1,6 +1,7 @@
 ﻿using ParkingLot.Model;
 using ParkingLot.RepositoryInterfaces;
 using System;
+using System.Collections.Generic;
 
 namespace ParkingLot.Repository
 {
@@ -60,6 +61,17 @@ namespace ParkingLot.Repository
             {
                 int slots = _storage.Length;
                 return slots;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        public VehicleDetailsModel[] GetParkingDetails()
+        {
+            try
+            {
+                return _storage;
             }
             catch(Exception ex)
             {

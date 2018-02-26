@@ -24,7 +24,9 @@ namespace ParkingLot
             IValidateSlotNumberToEmpty _validateSlotNumberToEmpty = new ValidateSlotNumberToEmpty(_parkingRepository, _maxSlotIndex);
             ILeaveSuccessMessage _leaveSuccessMessage = new LeaveSuccessMessage();
             ICommandExecutorSelector leave = new Leave(_checkCommand, _slotToEmpty, _validateSlotNumberToEmpty, _parkingRepository, _leaveSuccessMessage);
-            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave };
+            IStatusOutput _statusOutput = new StatusOutput();
+            ICommandExecutorSelector status = new Status(_checkCommand, _parkingRepository, _statusOutput);
+            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave, status };
             ICommandExecutorProvier provider = new CommandExecutorProvider(_selectors);
             for (;;)
             {

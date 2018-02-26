@@ -1,4 +1,5 @@
 ﻿using ParkingLot.Model;
+using System.Collections.Generic;
 
 namespace ParkingLot.RepositoryInterfaces
 {
@@ -9,5 +10,6 @@ namespace ParkingLot.RepositoryInterfaces
         int GetEmptySlotIndex();
         void EmptyASlot(int index);
         int TotalSlotAllocated();
+        VehicleDetailsModel[] GetParkingDetails();
     }
 }
