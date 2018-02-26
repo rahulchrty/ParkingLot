@@ -37,7 +37,7 @@ namespace ParkingLot.Repository
             {
                 emptyIndex = Array.IndexOf(_storage, null);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw;
             }

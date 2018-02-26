@@ -69,16 +69,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommandExecutor\CheckCommandTest.cs" />
     <Compile Include="CommandExecutor\CommandExecutorProviderTest.cs" />
     <Compile Include="BehaviourHijack\ExecuteSelectorHijack.cs" />
     <Compile Include="CommandExecutor\CreateParkingLotTest.cs" />
-    <Compile Include="CommandExecutor\CheckCommandTest.cs" />
     <Compile Include="CommandExecutor\ParkTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\SlotTest.cs" />
-    <Compile Include="Utils\CommandTest.cs" />
     <Compile Include="Utils\ParkingVehicleTest.cs" />
     <Compile Include="Utils\ParkSuccessMessageTest.cs" />
+    <Compile Include="Utils\SlotTest.cs" />
+    <Compile Include="Utils\CommandTest.cs" />
     <Compile Include="Validations\ValidateVeicleDetailsTest.cs" />
   </ItemGroup>
   <ItemGroup>

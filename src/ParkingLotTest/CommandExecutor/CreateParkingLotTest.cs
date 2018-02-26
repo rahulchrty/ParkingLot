@@ -16,7 +16,7 @@ namespace ParkingLotTest.CommandExecutor
         [TestInitialize]
         public void SetUp()
         {
-            _mockCheckCommand = new Mock<ICheckCommand>(); 
+            _mockCheckCommand = new Mock<ICheckCommand>();
             _mockSlot = new Mock<ISlot>();
             _mockParkingRepository = new Mock<IParkingLotRepository>();
             _commandExecutorSelector = new CreateParkingLot(_mockCheckCommand.Object, _mockSlot.Object, _mockParkingRepository.Object);

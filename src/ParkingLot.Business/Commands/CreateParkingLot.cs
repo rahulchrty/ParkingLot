@@ -40,7 +40,7 @@ namespace ParkingLot.Business
                 }
                 return message;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw;
             }
