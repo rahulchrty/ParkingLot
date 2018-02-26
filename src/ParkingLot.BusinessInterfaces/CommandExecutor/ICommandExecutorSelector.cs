@@ -2,6 +2,6 @@
 {
     public interface ICommandExecutorSelector : ICommandExecutor
     {
-        bool IsRequireCommandExecutor(string inputString);
+        bool IsRequireCommandExecutor(string userInputCommand);
     }
 }

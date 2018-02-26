@@ -2,6 +2,6 @@
 {
     public interface ICommand
     {
-        string GetCommand(string inputString);
+        string GetCommand(string userInputCommand);
     }
 }

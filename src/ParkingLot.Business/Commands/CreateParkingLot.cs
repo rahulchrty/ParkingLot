@@ -1,45 +1,49 @@
 ﻿using ParkingLot.BusinessInterfaces;
 using ParkingLot.RepositoryInterfaces;
+using System;
 
 namespace ParkingLot.Business
 {
     public class CreateParkingLot : ICommandExecutorSelector
     {
-        private ICommand _command;
+        private ICheckCommand _checkCommand;
         private ISlot _slot;
         private IParkingLotRepository _parkingRepository;
-        public CreateParkingLot(ICommand command,
+        public CreateParkingLot(ICheckCommand checkCommand,
                                 ISlot slot,
                                 IParkingLotRepository parkingRepository)
         {
-            _command = command;
+            _checkCommand = checkCommand;
             _slot = slot;
             _parkingRepository = parkingRepository;
         }
-        public bool IsRequireCommandExecutor(string inputString)
+        public bool IsRequireCommandExecutor(string userInputCommand)
         {
             bool isRequiredExecutor = false;
-            string command = _command.GetCommand(inputString);
-            if (command.Equals("create_parking_lot"))
-            {
-                isRequiredExecutor = true;
-            }
+            isRequiredExecutor = _checkCommand.AreEqual(userInputCommand, "create_parking_lot");
             return isRequiredExecutor;
         }
         public string ExecuteCommand(string command)
         {
             string message = string.Empty;
-            int allocableSize = _slot.GetSlotSize(command);
-            if (allocableSize > 0)
+            try
             {
-                _parkingRepository.CreateParkingSlots(allocableSize);
-                message = "Created a parking lot with " + allocableSize + " slots";
+                int allocableSize = _slot.GetSlotSize(command);
+                if (allocableSize > 0)
+                {
+                    _parkingRepository.CreateParkingSlots(allocableSize);
+                    message = "Created a parking lot with " + allocableSize + " slots";
+                }
+                else
+                {
+                    message = "Invalid slot size";
+                }
+                return message;
             }
-            else
+            catch(Exception ex)
             {
-                message = "Invalid slot size";
+                throw;
             }
-            return message;
         }
     }
 }

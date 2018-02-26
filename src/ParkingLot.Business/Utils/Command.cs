@@ -4,12 +4,12 @@ namespace ParkingLot.Business
 {
     public class Command : ICommand
     {
-        public string GetCommand(string inputString)
+        public string GetCommand(string userInputCommand)
         {
             string command = string.Empty;
-            if (!string.IsNullOrEmpty(inputString))
+            if (!string.IsNullOrEmpty(userInputCommand))
             {
-                command = inputString.Trim().Split(' ')[0];
+                command = userInputCommand.Trim().Split(' ')[0];
             }
             return command;
         }
