@@ -15,7 +15,7 @@ Visual Studio 2015 or above
 * Application can run either by providing a file parameter  `ParkingLot file.txt`.
 * Or just by typing `ParkingLot` to command prompt and then provide require commands
 
-### Sample inputs `d:\>ParkingLot d:\files\parking.txt`
+### Sample inputs `d:\>parking_lot d:\files\parking.txt`
 
 ```bash 
 create_parking_lot 6
@@ -59,7 +59,7 @@ KA-01-HH-1234, KA-01-HH-9999, KA-01-P-333
 Not found
 ```
 
-### `d:\>ParkingLot`
+### `d:\>parking_lot`
 ```bash
 create_parking_lot 6
 Created a parking lot with 6 slots
