@@ -17,7 +17,8 @@ namespace ParkingLot
             ICheckCommand _checkCommand = new CheckCommand(_command);
             ISlot _slot = new Slot();
             IParkingLotRepository _parkingRepository = new ParkingLotRepository();
-            ICommandExecutorSelector createParkingLot = new CreateParkingLot(_checkCommand, _slot, _parkingRepository);
+            ICheckParkingLotCreated checkParkingLotCreated = new CheckParkingLotCreated(_parkingRepository);
+            ICommandExecutorSelector createParkingLot = new CreateParkingLot(_checkCommand, _slot, checkParkingLotCreated, _parkingRepository);
             IValidateVeicleDetails _validateVeicleDetails = new ValidateVeicleDetails();
             IParkingVehicle _parkingVehicle = new ParkingVehicle();
             IParkSuccessMessage _parkSuccessMessage = new ParkSuccessMessage();

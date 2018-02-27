@@ -36,8 +36,8 @@ namespace ParkingLotTest.Validations
             VehicleDetailsModel vehivleDetail = null;
             //When: I call ValidateVeicleDetails object
             string result = _validateVeicleDetails.Validate(vehivleDetail);
-            //Then: I get 'Please provide all require details'
-            string expected = "Please provide all require details";
+            //Then: I get 'Invalid vehicle details'
+            string expected = "Invalid vehicle details";
             Assert.AreEqual(expected, result);
         }
     }

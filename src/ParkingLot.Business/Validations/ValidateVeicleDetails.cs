@@ -10,7 +10,7 @@ namespace ParkingLot.Business
             string message = string.Empty;
             if (vehivleDetail == null)
             {
-                message = "Please provide all require details";
+                message = "Invalid vehicle details";
             }
             return message;
         }

@@ -93,6 +93,7 @@
     <Compile Include="Utils\SlotByColorTest.cs" />
     <Compile Include="Utils\SlotByColorMessageTest.cs" />
     <Compile Include="Utils\SlotByRegistrationNumberTest.cs" />
+    <Compile Include="Utils\CheckParkingLotCreatedTest.cs" />
     <Compile Include="Utils\VehicleRegistrationNumberTest.cs" />
     <Compile Include="Utils\VehicleByColorSuccessMessageTest.cs" />
     <Compile Include="Utils\VehicleByColorTest.cs" />

@@ -50,6 +50,7 @@
     <Compile Include="Commands\SlotNumbersForCarsWithColour.cs" />
     <Compile Include="Commands\Status.cs" />
     <Compile Include="Utils\Command.cs" />
+    <Compile Include="Utils\CheckParkingLotCreated.cs" />
     <Compile Include="Utils\SlotByRegistrationNumber.cs" />
     <Compile Include="Utils\VehicleRegistrationNumber.cs" />
     <Compile Include="Utils\LeaveSuccessMessage.cs" />

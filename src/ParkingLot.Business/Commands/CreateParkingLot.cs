@@ -8,13 +8,16 @@ namespace ParkingLot.Business
     {
         private ICheckCommand _checkCommand;
         private ISlot _slot;
+        private ICheckParkingLotCreated _checkParkingLotCreated;
         private IParkingLotRepository _parkingRepository;
         public CreateParkingLot(ICheckCommand checkCommand,
                                 ISlot slot,
+                                ICheckParkingLotCreated checkParkingLotCreated,
                                 IParkingLotRepository parkingRepository)
         {
             _checkCommand = checkCommand;
             _slot = slot;
+            _checkParkingLotCreated = checkParkingLotCreated;
             _parkingRepository = parkingRepository;
         }
         public bool IsRequireCommandExecutor(string userInputCommand)
@@ -31,8 +34,16 @@ namespace ParkingLot.Business
                 int allocableSize = _slot.GetSlotSize(command);
                 if (allocableSize > 0)
                 {
-                    _parkingRepository.CreateParkingSlots(allocableSize);
-                    message = "Created a parking lot with " + allocableSize + " slots";
+                    bool isCreated = _checkParkingLotCreated.IsCreated();
+                    if (!isCreated)
+                    {
+                        _parkingRepository.CreateParkingSlots(allocableSize);
+                        message = "Created a parking lot with " + allocableSize + " slots";
+                    }
+                    else
+                    {
+                        message = "Parking lot alread created";
+                    }
                 }
                 else
                 {
