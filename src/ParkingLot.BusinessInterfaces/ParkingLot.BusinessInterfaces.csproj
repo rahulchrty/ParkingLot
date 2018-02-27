@@ -47,6 +47,8 @@
     <Compile Include="Utils\ICommand.cs" />
     <Compile Include="Utils\ILeaveSuccessMessage.cs" />
     <Compile Include="Utils\IMaxSlotIndex.cs" />
+    <Compile Include="Utils\ISlotByColor.cs" />
+    <Compile Include="Utils\ISlotByColorMessage.cs" />
     <Compile Include="Utils\IVehicleByColor.cs" />
     <Compile Include="Utils\IParkingVehicle.cs" />
     <Compile Include="Utils\IParkSuccessMessage.cs" />
