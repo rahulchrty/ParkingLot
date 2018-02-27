@@ -11,17 +11,45 @@ namespace ParkingLotTest.Commnds
     [TestClass]
     public class StatusTest
     {
-        private Mock<ICheckCommand> _mockCheckCommand;
         private Mock<IParkingLotRepository> _mockParkingRepository;
         private Mock<IStatusOutput> _mockStatusOutput;
         private ICommandExecutorSelector _commandExecutorSelector;
         [TestInitialize]
         public void SetUp()
         {
-            _mockCheckCommand = new Mock<ICheckCommand>();
             _mockParkingRepository = new Mock<IParkingLotRepository>();
             _mockStatusOutput = new Mock<IStatusOutput>();
-            _commandExecutorSelector = new Status(_mockCheckCommand.Object, _mockParkingRepository.Object, _mockStatusOutput.Object);
+            _commandExecutorSelector = new Status(_mockParkingRepository.Object, _mockStatusOutput.Object);
+        }
+        [TestMethod]
+        public void IsRequireCommandExecutor_GivenCommandAs_status_Then_Get_True()
+        {
+            //Given: Command as 'status'
+            string command = "status";
+            //When: I call Status object
+            bool result = _commandExecutorSelector.IsRequireCommandExecutor(command);
+            //Then: I get true
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void IsRequireCommandExecutor_GivenCommandAs_parking_status_Then_Get_False()
+        {
+            //Given: Command as 'parking_status'
+            string command = "parking_status";
+            //When: I call Status object
+            bool result = _commandExecutorSelector.IsRequireCommandExecutor(command);
+            //Then: I get false
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void IsRequireCommandExecutor_GivenCommandAs_status_xyz_Then_Get_False()
+        {
+            //Given: Command as 'status xyz'
+            string command = "status xyz";
+            //When: I call Status object
+            bool result = _commandExecutorSelector.IsRequireCommandExecutor(command);
+            //Then: I get false
+            Assert.IsFalse(result);
         }
         [TestMethod]
         public void ExecuteCommand()

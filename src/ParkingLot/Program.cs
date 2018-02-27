@@ -29,7 +29,7 @@ namespace ParkingLot
             ILeaveSuccessMessage _leaveSuccessMessage = new LeaveSuccessMessage();
             ICommandExecutorSelector leave = new Leave(_checkCommand, _slotToEmpty, _validateSlotNumberToEmpty, _parkingRepository, _leaveSuccessMessage);
             IStatusOutput _statusOutput = new StatusOutput();
-            ICommandExecutorSelector status = new Status(_checkCommand, _parkingRepository, _statusOutput);
+            ICommandExecutorSelector status = new Status(_parkingRepository, _statusOutput);
             IVehicleColor _vehicleColor = new VehicleColor();
             IVehicleByColor _vehicleByColor = new VehicleByColor();
             IVehicleByColorSuccessMessage _vehicleByColorSuccessMessage = new VehicleByColorSuccessMessage();

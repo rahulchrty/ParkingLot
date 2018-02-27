@@ -7,21 +7,21 @@ namespace ParkingLot.Business
 {
     public class Status : ICommandExecutorSelector
     {
-        private ICheckCommand _checkCommand;
         private IParkingLotRepository _parkingRepository;
         private IStatusOutput _statusOutput;
-        public Status(ICheckCommand checkCommand,
-                        IParkingLotRepository parkingRepository,
+        public Status(IParkingLotRepository parkingRepository,
                         IStatusOutput statusOutput)
         {
-            _checkCommand = checkCommand;
             _parkingRepository = parkingRepository;
             _statusOutput = statusOutput;
         }
         public bool IsRequireCommandExecutor(string userInputCommand)
         {
             bool isRequiredExecutor = false;
-            isRequiredExecutor = _checkCommand.AreEqual(userInputCommand, "status");
+            if (userInputCommand.Trim().ToLower().Equals("status"))
+            {
+                isRequiredExecutor = true;
+            }
             return isRequiredExecutor;
         }
         public string ExecuteCommand(string command)
