@@ -26,7 +26,11 @@ namespace ParkingLot
             ICommandExecutorSelector leave = new Leave(_checkCommand, _slotToEmpty, _validateSlotNumberToEmpty, _parkingRepository, _leaveSuccessMessage);
             IStatusOutput _statusOutput = new StatusOutput();
             ICommandExecutorSelector status = new Status(_checkCommand, _parkingRepository, _statusOutput);
-            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave, status };
+            IVehicleColor _vehicleColor = new VehicleColor();
+            IVehicleByColor _vehicleByColor = new VehicleByColor();
+            IVehicleByColorSuccessMessage _vehicleByColorSuccessMessage = new VehicleByColorSuccessMessage();
+            ICommandExecutorSelector regNoByColor = new RegistrationNumbersForCarsWithColour(_checkCommand, _vehicleColor, _parkingRepository, _vehicleByColor, _vehicleByColorSuccessMessage);
+            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave, status, regNoByColor };
             ICommandExecutorProvier provider = new CommandExecutorProvider(_selectors);
             for (;;)
             {

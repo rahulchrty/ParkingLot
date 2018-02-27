@@ -45,6 +45,7 @@
     <Compile Include="Commands\CreateParkingLot.cs" />
     <Compile Include="Commands\Leave.cs" />
     <Compile Include="Commands\Park.cs" />
+    <Compile Include="Commands\RegistrationNumbersForCarsWithColour.cs" />
     <Compile Include="Commands\Status.cs" />
     <Compile Include="Utils\Command.cs" />
     <Compile Include="Utils\LeaveSuccessMessage.cs" />
@@ -55,6 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\SlotToEmpty.cs" />
     <Compile Include="Utils\StatusOutput.cs" />
+    <Compile Include="Utils\VehicleByColor.cs" />
+    <Compile Include="Utils\VehicleByColorSuccessMessage.cs" />
+    <Compile Include="Utils\VehicleColor.cs" />
     <Compile Include="Validations\ValidateSlotNumberToEmpty.cs" />
     <Compile Include="Validations\ValidateVeicleDetails.cs" />
   </ItemGroup>

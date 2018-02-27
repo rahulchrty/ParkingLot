@@ -76,6 +76,7 @@
     <Compile Include="CommandExecutor\ParkTest.cs" />
     <Compile Include="Commnds\LeaveTest.cs" />
     <Compile Include="Commnds\StatusTest.cs" />
+    <Compile Include="Commnds\RegistrationNumbersForCarsWithColourTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ParkingVehicleTest.cs" />
     <Compile Include="Utils\ParkSuccessMessageTest.cs" />
@@ -84,6 +85,9 @@
     <Compile Include="Utils\SlotToEmptyTest.cs" />
     <Compile Include="Utils\MaxSlotIndexTest.cs" />
     <Compile Include="Utils\StatusOutputTest.cs" />
+    <Compile Include="Utils\VehicleByColorSuccessMessageTest.cs" />
+    <Compile Include="Utils\VehicleByColorTest.cs" />
+    <Compile Include="Utils\VehicleColorTest.cs" />
     <Compile Include="Validations\ValidateSlotNumberToEmptyTest.cs" />
     <Compile Include="Validations\ValidateVeicleDetailsTest.cs" />
   </ItemGroup>
