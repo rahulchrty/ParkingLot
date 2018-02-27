@@ -69,6 +69,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BehaviourHijack\MockCommandExecutor.cs" />
     <Compile Include="CommandExecutor\CheckCommandTest.cs" />
     <Compile Include="CommandExecutor\CommandExecutorProviderTest.cs" />
     <Compile Include="BehaviourHijack\ExecuteSelectorHijack.cs" />
@@ -79,6 +80,8 @@
     <Compile Include="Commnds\RegistrationNumbersForCarsWithColourTest.cs" />
     <Compile Include="Commnds\SlotNumbersForCarsWithColourTest.cs" />
     <Compile Include="Commnds\SlotNumberForRegistrationNumberTest.cs" />
+    <Compile Include="Main\ExecuteFromFileTest.cs" />
+    <Compile Include="Main\ValidateFileTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ParkingVehicleTest.cs" />
     <Compile Include="Utils\ParkSuccessMessageTest.cs" />
@@ -113,6 +116,10 @@
     <ProjectReference Include="..\ParkingLot.RepositoryInterfaces\ParkingLot.RepositoryInterfaces.csproj">
       <Project>{c871c2ad-d390-4bdb-88fb-ed24ca9d1639}</Project>
       <Name>ParkingLot.RepositoryInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingLot\ParkingLot.csproj">
+      <Project>{2e078087-fc9e-49be-9eb8-0a976fbf0bf6}</Project>
+      <Name>ParkingLot</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
