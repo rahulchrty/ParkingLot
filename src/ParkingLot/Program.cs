@@ -33,7 +33,10 @@ namespace ParkingLot
             ISlotByColor _slotByColor = new SlotByColor();
             ISlotByColorMessage _slotByColorMessage = new SlotByColorMessage();
             ICommandExecutorSelector slotNoByColor = new SlotNumbersForCarsWithColour(_checkCommand, _vehicleColor, _parkingRepository, _slotByColor, _slotByColorMessage);
-            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave, status, regNoByColor, slotNoByColor };
+            IVehicleRegistrationNumber _vehicleRegistrationNumber = new VehicleRegistrationNumber();
+            ISlotByRegistrationNumber _slotByRegistrationNumber = new SlotByRegistrationNumber();
+            ICommandExecutorSelector slotByRegistration = new SlotNumberForRegistrationNumber(_checkCommand, _vehicleRegistrationNumber, _parkingRepository, _slotByRegistrationNumber);
+            ICommandExecutorSelector[] _selectors = { createParkingLot, park, leave, status, regNoByColor, slotNoByColor, slotByRegistration };
             ICommandExecutorProvier provider = new CommandExecutorProvider(_selectors);
             for (;;)
             {

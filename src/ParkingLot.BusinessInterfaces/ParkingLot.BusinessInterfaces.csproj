@@ -49,6 +49,7 @@
     <Compile Include="Utils\IMaxSlotIndex.cs" />
     <Compile Include="Utils\ISlotByColor.cs" />
     <Compile Include="Utils\ISlotByColorMessage.cs" />
+    <Compile Include="Utils\ISlotByRegistrationNumber.cs" />
     <Compile Include="Utils\IVehicleByColor.cs" />
     <Compile Include="Utils\IParkingVehicle.cs" />
     <Compile Include="Utils\IParkSuccessMessage.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Utils\IStatusOutput.cs" />
     <Compile Include="Utils\IVehicleByColorSuccessMessage.cs" />
     <Compile Include="Utils\IVehicleColor.cs" />
+    <Compile Include="Utils\IVehicleRegistrationNumber.cs" />
     <Compile Include="Validations\IValidateSlotNumberToEmpty.cs" />
     <Compile Include="Validations\IValidateVeicleDetails.cs" />
   </ItemGroup>
